@@ -31,7 +31,8 @@
   text-align: center;
   background: #333;
   color: #fff;
-  border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;  
+
 }
 @media (max-width: 600px) {
   .board-column-header {
@@ -76,10 +77,10 @@
   width: 100%;
   margin: 5px 0;
   font-family: 'Roboto', sans-serif;
-
 }
 .board-item.muuri-item-releasing {
   z-index: 9998;
+
 }
 .board-item.muuri-item-dragging {
   z-index: 9999;
@@ -91,13 +92,27 @@
 .board-item-content {
   position: relative;
   padding: 20px;
-  background: #fff;
+  background:#fff;
   border-radius: 4px;
   font-size: 17px;
   cursor: pointer;
   -webkit-box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
   box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
+  transition:   
 }
+
+.board-item-content {
+  position: relative;
+  padding: 20px;
+  background:#fff;
+  border-radius: 5px;
+  font-size: 17px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
+  box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
+}
+
+
 @media (max-width: 600px) {
   .board-item-content {
     text-align: center;
@@ -127,14 +142,15 @@ header {
   width: 100%;
   height: 80px;
   position: fixed;
-  padding: 15px;
+  padding: 25px;
   top: 0;
   left: 0;
   z-index: 5;
-  background: #25b99a;
+  background: #FF7133;
   box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
 }
 
+/* teksten i input-feltet */
 header input {
   width: 100%;
   height: 50px;
@@ -175,8 +191,8 @@ header button {
   height: 50px;
 
   position:absolute;
-  top:15px;
-  right:15px;
+  top:25px;
+  right:45px;
   z-index:2;
 
   border-radius: 25px;
@@ -193,16 +209,15 @@ header button {
 header button svg {
   width: 16px;
   height: 16px;
-
   position: absolute;
   top: 50%;
   left: 50%;
-
   margin: -8px 0 0 -8px;
 }
 
+
 header button svg .fill {
-  fill: #25b99a;
+  fill: #FF7133;
 }
 
 .container {
@@ -232,116 +247,79 @@ ul.todo li:last-of-type {
   margin: 0;
 }
 
-ul.todo li .buttons {
-  width: 100px;
-  height: 50px;
-
-  position: absolute;
-  top: 0;
-  right: 0;
+.remove{
+  width: 18px;
+  height: 18px;
+  float: right;
 }
 
-ul.todo li .buttons button {
-  width: 50px;
-  height: 50px;
+.remove svg{
+  fill: rgb(224, 97, 38);
+}
+
+#viktig{
+  position: absolute;
+  z-index: 5;
+  left: 25px;
+}
+
+.label{
   float: left;
-  background: none;
-  position: relative;
-  border: 0px;
-  box-shadow: none;
-  outline: none;
+  width: 17px;
+  height: 17px;
+}
+
+/* POP UP CSS */
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: orange;
+  color: #fff;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 90px;
   cursor: pointer;
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  left: 28px;
+  width: 280px;
+  font-size: 20px;
+  z-index: 10;
 }
 
-ul.todo li .buttons button:last-of-type:before {
-  content: '';
-  width: 1px;
-  height: 30px;
-  background: #edf0f1;
-
-  position: absolute;
-  top: 10px;
-  left: 0;
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 15px;
+  z-index: 9;
 }
-
-ul.todo li .buttons button svg {
-  width: 22px;
-  height: 22px;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  margin: -11px 0 0 -11px;
+/* Add styles to the form container */
+.form-container {
+  width: 300px;
+  padding: 10px;
+  animation: popup 0.7s;
 }
-
-ul.todo li .buttons button.complete svg {
-  border-radius: 11px;
-  border: 1.5px solid #25b99a;
-
-  transition: background 0.2s ease;
-}
-
-ul.todo#completed li .buttons button.complete svg {
-  background: #25b99a;
-  border: 0px;
-}
-
-ul.todo:not(#completed) li .buttons button.complete:hover svg {
-  background: rgba(37, 185, 154, 0.75);
-}
-
-ul.todo:not(#completed) li .buttons button.complete:hover svg .fill {
-  fill: #fff;
-}
-
-ul.todo#completed li .buttons button.complete svg .fill {
-  fill: #fff;
-}
-
-ul.todo li .buttons button svg .fill {
-  transition: fill 0.2s ease;
-}
-
-ul.todo li .buttons button.remove svg .fill {
-  fill: #c0cecb;
-}
-
-ul.todo li .buttons button.remove:hover svg .fill {
-  fill: #e85656;
-}
-
-ul.todo li .buttons button.complete svg .fill {
-  fill: #25b99a;
-}
-
-ul.todo#completed {
-  position: relative;
-  padding: 60px 0 0 0;
-}
-
-ul.todo#completed:before {
-  content: '';
-  width: 150px;
-  height: 1px;
-  background: #d8e5e0;
-
-  position: absolute;
-  top: 30px;
-  left: 50%;
-
-  margin: 0 0 0 -75px;
-}
-
-
-ul.todo#todo:after,
-ul.todo#completed:after {
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: red;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 90px;
+  cursor: pointer;
   width: 100%;
-  display: block;
-  text-align: center;
-  font-size: 12px;
-  color: #aaa;
+  margin-bottom:10px;
+  opacity: 0.8;
+  font-size: 20px;
+}
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+  filter: invert(1);
 }
