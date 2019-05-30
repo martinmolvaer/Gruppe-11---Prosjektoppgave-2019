@@ -3,15 +3,16 @@
   position: relative;
   margin-left: 1%;
   top: 100px;
-
 }
+
+/* Bakgrunn av div som holder items */
 .board-column {
   position: absolute;
   left: 0;
   right: 0;
   width: 30%;
   margin: 0 1.5%;
-  background: #f0f0f0;
+  background: #f5f5f5;
   border-radius: 3px;
   z-index: 1;
 }
@@ -31,46 +32,48 @@
   text-align: center;
   background: #333;
   color: #fff;
-  border-radius: 3px 3px 0 0;  
-
+  border-radius: 3px 3px 0 0;
 }
+
 @media (max-width: 600px) {
   .board-column-header {
     text-indent: -1000px;
   }
 }
+
+/* To do-header */
 .board-column.todo .board-column-header {
-  background: rgb(177, 181, 185);
+  background: #339DA4;
 }
+/* doing-header */
+
 .board-column.working .board-column-header {
   background: #e7ce89;
 }
+/* done-header */
 .board-column.done .board-column-header {
-  background: #5d615f;
+  background: #66B85A;
 }
 /* This is the secret sauce,
    always use a wrapper for setting
    the "overflow: scroll/auto"  */
 .board-column-content-wrapper {
+  overflow: scroll;
   position: relative;
   height: 100%;
   overflow-y: auto;
+  max-height: 450px;
 }
 /* Never ever set "overflow: auto/scroll"
-   to the muuri element, stuff will break  */
+   to the muuri element, stuff will break  FARGE PÅ SKRIFT */
 .board-column-content {
   overflow: hidden;
   position: relative;
   border: 10px solid transparent;
   min-height: 95px;
+  
 }
-
-.board-column-content:active {
-  overflow: hidden;
-  position: relative;
-  border: 10px solid transparent;
-  min-height: 95px;
-}
+/* farge på innhold/skrift */
 .board-item {
   overflow: hidden;
   position: absolute;
@@ -86,27 +89,28 @@
   z-index: 9999;
   cursor: move;
 }
+
 .board-item.muuri-item-hidden {
   z-index: 0;
-}
-.board-item-content {
-  position: relative;
-  padding: 20px;
-  background:#fff;
-  border-radius: 4px;
-  font-size: 17px;
-  cursor: pointer;
-  -webkit-box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
-  box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
-  transition:   
 }
 
 .board-item-content {
   position: relative;
   padding: 20px;
   background:#fff;
-  border-radius: 5px;
   font-size: 17px;
+  border: 2px white solid;
+  cursor: grab;
+  -webkit-box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
+  box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
+} 
+
+.board-item-content {
+  position: relative;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  font-size: 1x;
   cursor: pointer;
   -webkit-box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
   box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
@@ -216,6 +220,7 @@ header button svg {
 }
 
 
+
 header button svg .fill {
   fill: #FF7133;
 }
@@ -251,11 +256,15 @@ ul.todo li:last-of-type {
   width: 18px;
   height: 18px;
   float: right;
+  margin: -17px;
 }
 
 .remove svg{
-  fill: rgb(224, 97, 38);
 }
+.remove svg:hover{
+fill: rgb(224, 97, 38);
+}
+
 
 #viktig{
   position: absolute;
@@ -263,11 +272,33 @@ ul.todo li:last-of-type {
   left: 25px;
 }
 
+#group{
+  position: absolute;
+  z-index: 5;
+  left: 155px;
+}
+
+/* icons for viktighet */
 .label{
-  float: left;
   width: 17px;
   height: 17px;
+  left: 20px;
 }
+/*
+select {
+  border: 1px solid #ccc;
+  width: 120px;
+  border-radius: 3px;
+  color: white;
+  overflow: hidden;
+  font-size: 15px;
+  padding: 5px 8px;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  -webkit-appearance: none;
+}*/
+
 
 /* POP UP CSS */
 
@@ -318,8 +349,11 @@ ul.todo li:last-of-type {
 .form-container .cancel {
   background-color: red;
 }
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
-  filter: invert(1);
+
+#item-popup{
+  display: none;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  z-index: 100;
 }
