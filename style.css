@@ -49,6 +49,7 @@
 
 .board-column.working .board-column-header {
   background: #e7ce89;
+    filter:  saturate(5);
 }
 /* done-header */
 .board-column.done .board-column-header {
@@ -295,18 +296,18 @@ left: 20px;
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
-  background-color: orange;
-  color: #fff;
+  background-color: #FF7133;
+  color: black;
   padding: 16px 20px;
   border: none;
   border-radius: 90px;
   cursor: pointer;
   opacity: 0.8;
   position: fixed;
-  bottom: 23px;
-  left: 28px;
-  width: 280px;
-  font-size: 20px;
+  bottom: 20px;
+  left: 25px;
+  width: 180px;
+  font-size: 15px;
   z-index: 10;
 }
 
@@ -326,19 +327,27 @@ left: 20px;
 }
 /* Set a style for the submit/login button */
 .form-container .btn {
-  background-color: red;
+  background-color: #FF7133;
   padding: 16px 20px;
   border: none;
   border-radius: 90px;
   cursor: pointer;
-  width: 100%;
+  width: 180px;
   margin-bottom:10px;
-  opacity: 0.8;
-  font-size: 20px;
+  opacity: 0.8  ;
+  font-size: 15px;
+}
+
+.open-button:hover {
+    filter: saturate(4);
+}
+
+.form-container .btn:hover{
+    filter : saturate(4);
 }
 /* Add a red background color to the cancel button */
 .form-container .cancel {
-  background-color: red;
+  background-color: #FF7133;
 }
 
 /* CSS for modal-popup */
@@ -382,17 +391,6 @@ left: 20px;
   text-decoration: none;
   cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* test select box styling */
 
