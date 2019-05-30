@@ -58,10 +58,13 @@ function addItemTodo(text){
     
     item.style.display = 'none';
     // få grid til å refreshe
-    
 })
 
+  item.addEventListener('click', function(){
 
+  modal.style.display = "block";
+
+ })
 
   //make labels
   var label = document.createElement('div');
@@ -139,12 +142,13 @@ option.setAttribute('id', "Danial")
   item.appendChild(buttons);
   wrapper.appendChild(item);
 
+  /*
   if(list.firstElementChild){
     list.insertBefore(wrapper, list.children[0]);
     }else{
     list.appendChild(wrapper);
 }
-
+*/
   grid[0].add(wrapper); 
 
 }
@@ -166,6 +170,7 @@ itemContainers.forEach(function (container) {
     dragSort: function () {
       return columnGrids;
     },
+    dragStartPredicate:{distance: 0, delay: 100, handle: false},
     dragSortInterval: 0,
     dragContainer: document.body,
     dragReleaseDuration: 300,
@@ -203,6 +208,8 @@ itemContainers.forEach(function (container) {
     
   }); 
 
+  
+
   // Add the column grid reference to the column grids
   // array, so we can access it later on.
   columnGrids.push(tempGrid);
@@ -228,14 +235,11 @@ boardGrid = new Muuri('.board', {
 
 
 
-
-
 // POP-UP JS 
 
 function openForm() {
   document.getElementById("myForm").style.display = "block";
   document.getElementById('help-btn').style.display = "none";
-  document.getElementById("myForm").style.tranform = "scale(2)";
 }
 
 function closeForm() {

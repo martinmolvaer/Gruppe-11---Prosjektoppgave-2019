@@ -46,7 +46,6 @@
         <div class="board-column-header">To do</div>
         <div class="board-column-content-wrapper">
           <div class="board-column-content" id="todo">
-              <div class="board-item"><div class="board-item-content"><span>Item #</span>5</div></div>
         </div>
          </div>
       </div>
@@ -69,17 +68,22 @@
       </div>
     </div>
 
-
     <!-- POP UP -->
 
 <button id="help-btn" class="open-button" onclick="openForm()">Hjelp</button>
 
 <div class="form-popup" id="myForm">
   <form class="form-container">
-<button type= "button" class="btn" id="myBtn">Informasjon om kort</button>
+
+    <button type= "button" class="btn" id="myBtn">Informasjon om kort</button>
   <div id="myModal" class="modal"><div>
   <span class="close">&times;</span>
-  <img class="modal-content" id="img01" src="img01.jpg">
+  <div class="modal-content">
+    Informasjon om item:
+    Task: blabla
+    Label: red
+    Member: Martin
+  </div>
 </div>
 </div>
   <button type="button" class="btn" onclick ="setInvert()">Hjelp meg med å se</button>

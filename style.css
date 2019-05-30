@@ -357,8 +357,17 @@ left: 20px;
 .modal-content{
   margin: auto;
   display: block;
-  width: 80%;
+  width: 100%;
+  position: absolute;
   max-width: 700px;
+  width: 300px;
+  margin: 5px;
+  height: 100px;
+  left: 450px;
+  top: 300px;
+  background-color: #fff;
+  border: 2px solid black;
+  font-size: 15px;
 }
 .close{
   color: #aaa;
