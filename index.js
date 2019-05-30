@@ -62,6 +62,7 @@ function addItemTodo(text){
 })
 
 
+
   //make labels
   var label = document.createElement('div');
   label.classList.add('label');
@@ -71,18 +72,70 @@ function addItemTodo(text){
   
   if(document.getElementById('viktig').value === 'green'){
     label.innerHTML = greenLabelSVG;
+    label.setAttribute('id', "GREEN");
 
   } else if ((document.getElementById('viktig').value === 'yellow')){
     label.innerHTML = yellowLabelSVG;
+    label.setAttribute('id', "YELLOW");
 
   } else if(document.getElementById('viktig').value === 'red') {
+    label.setAttribute('id', "RED")
     label.innerHTML = redLabelSVG;
   }
 
 
-  //adding buttons to the div
+  // legge til "ansatte" til item
+var select=document.getElementById("Group");
+var arr = ["Danial", "Thomas", "Umu", "Martin", "Benjamin"];
+
+
+var option = document.createElement("DIV");
+option.classList.add('ansatt');
+
+
+if(select.value === 'Danial'){
+option.innerHTML = arr[0];
+option.setAttribute('id', "Danial")
+
+
+  } else if ((document.getElementById('Group').value === 'Thomas')){
+  option.innerHTML = arr[1];
+  option.setAttribute('id', "Thomas")
+
+
+  } else if(document.getElementById('Group').value === 'Umu') {
+  option.innerHTML = arr[2];
+  option.setAttribute('id', "Umu")
+
+  }
+
+  else if(document.getElementById('Group').value === "Martin"){
+  option.innerHTML = arr[3]; 
+  option.setAttribute('id', "Martin")
+
+  }
+
+  else if (document.getElementById('Group').value === "Benjamin"){
+  option.innerHTML = arr[4];
+  option.setAttribute('id', "Benjamin")
+
+  }
+
+  // lagre tasks med info til objekt
+  var taskSave = {
+    Task: item.textContent,
+    Label: label.id,
+    Member: option.id,
+  };
+
+  //legge tasks med info fra objekt til i array
+  memberSave.push(taskSave);
+
+
+  //legge til items til hoved-div
   buttons.appendChild(label);
   buttons.appendChild(remove);
+  buttons.appendChild(option);
   item.appendChild(buttons);
   wrapper.appendChild(item);
 
@@ -92,11 +145,11 @@ function addItemTodo(text){
     list.appendChild(wrapper);
 }
 
-  grid.push(item.textContent);
   grid[0].add(wrapper); 
 
 }
 
+var memberSave = [];
 var grid = [];
 
 
@@ -193,3 +246,30 @@ function closeForm() {
 
 function setInvert(){
 }   
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

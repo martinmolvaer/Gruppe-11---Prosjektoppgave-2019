@@ -7,6 +7,7 @@
     <link rel = "stylesheet"
     type = "text/css"
     href = "style.css" />
+    <style>@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');</style>
     <title>Todo</title>
 </head>
 <body>
@@ -17,13 +18,27 @@
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve"><g><path class="fill" d="M16,8c0,0.5-0.5,1-1,1H9v6c0,0.5-0.5,1-1,1s-1-0.5-1-1V9H1C0.5,9,0,8.5,0,8s0.5-1,1-1h6V1c0-0.5,0.5-1,1-1s1,0.5,1,1v6h6C15.5,7,16,7.5,16,8z"/></g></svg>
   </button>
 </header>
+
+<div id="labelselect" class="selectdiv">
 <select id="viktig" name="Label">
     <option value="default">Choose label</option>
     <option value="red">Red</option>
     <option value="yellow">Yellow</option>
     <option value="green">Green</option>
 </select>
+</div>
 
+
+<div id="groupselect" class="selectdiv">
+<select id="Group" name="Group">
+  <option value="default">Velg Ansatt(e) </option>
+  <option value="Danial">Danial </option>
+  <option value="Thomas">Thomas </option>
+  <option value="Umu">Umu </option>
+  <option value="Martin"> Martin </option>
+  <option value="Benjamin">Benjamin</option>
+</select>
+</div>
 
 <!-- To do -->
     <div class="board">
@@ -57,23 +72,26 @@
 
     <!-- POP UP -->
 
+<button id="help-btn" class="open-button" onclick="openForm()">Hjelp</button>
 
-
-        <button id="help-btn" class="open-button" onclick="openForm()">Hjelp</button>
-        
-        <div class="form-popup" id="myForm">
-          <form class="form-container">
-            <button type="button" class="btn" onclick ="setInvert()">Hjelp meg med å se</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Lukk</button>
-          </form>
-        </div>
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+<button type= "button" class="btn" id="myBtn">Informasjon om kort</button>
+  <div id="myModal" class="modal"><div>
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01" src="img01.jpg">
+</div>
+</div>
+  <button type="button" class="btn" onclick ="setInvert()">Hjelp meg med å se</button>
+  <button type="button" class="btn cancel" onclick="closeForm()">Lukk</button>
+  </form>
+</div>
 
     <!-- Muuri - Rammeverk -->
   <script src="https://unpkg.com/muuri@0.7.1/dist/muuri.min.js"></script>
   <script src="https://unpkg.com/web-animations-js@2.3.1/web-animations.min.js"></script>
   <script src="https://unpkg.com/hammerjs@2.0.8/hammer.min.js"></script>
   <script src="https://unpkg.com/muuri@0.7.1/dist/muuri.min.js"></script>
-
 
   <script src="index.js"></script>
 
