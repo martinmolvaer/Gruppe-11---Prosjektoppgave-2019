@@ -98,7 +98,7 @@
   position: relative;
   padding: 15px;
   background:#fff;
-  font-size: 17px;
+  font-size: 25px;
   border: 2px white solid;
   cursor: grab;
   -webkit-box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
@@ -259,6 +259,15 @@ ul.todo li:last-of-type {
   margin: -17px;
 }
 
+.info{
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin: 5px;
+  top: 5px;
+  left: 265px;
+}
+
 .remove svg:hover{
 fill: rgb(224, 97, 38);
 }
@@ -288,6 +297,8 @@ left: 20px;
   width: 15px;
   height: 15px;
   float: right;
+  left: 200px;
+  top: 5px;
 }
 
 /* POP UP CSS */
