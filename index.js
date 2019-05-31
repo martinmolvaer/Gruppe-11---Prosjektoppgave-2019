@@ -70,13 +70,15 @@ input.onkeyup = e => {
 };
 
 
-function addItemTodo(input){
+function addItemTodo(text){
 
     //lage div til todo og div til items
     var list = document.getElementById('todo')
     var item = document.createElement('div');
     item.classList = 'board-item-content';
-    item.innerText = input;
+    item.innerText = text;
+
+    var input = document.getElementById('item');
 
 
     //Creating the remove
@@ -159,7 +161,7 @@ function addItemTodo(input){
 
     // lagre tasks med info til objekt
     var taskSave = {
-    Task: item.textContent, // her kommer det ut member på item -- > needs fixin !!!!!
+    Task: input.value,
     Label: label.id,
     Member: option.id,
     };
