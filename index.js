@@ -59,7 +59,11 @@ document.getElementById('add').addEventListener('click', function(){
 // enter for å legge til task
 input.onkeyup = e => {
 
-  if(e.keyCode == 13){
+
+  var value = document.getElementById('item').value;
+
+
+  if(e.keyCode == 13 && value){
     addItemTodo(input.value);
     input.value = '';
 }
