@@ -7,24 +7,30 @@
 
 /* Bakgrunn av div som holder items */
 .board-column {
-  position: absolute;
-  left: 0;
-  right: 0;
   width: 30%;
   margin: 0 1.5%;
   background: #f5f5f5;
   border-radius: 3px;
   z-index: 1;
 }
-.board-column.muuri-item-releasing {
-  z-index: 2;
+
+.board-column-working{
+    width: 30%;
+    margin: 0 1.5%;
+    background: #f5f5f5;
+    border-radius: 3px;
+    z-index: 1;
 }
-.board-column.muuri-item-dragging {
-  z-index: 3;
-  cursor: move;
+
+.board-column-done{
+    width: 30%;
+    margin: 0 1.5%;
+    background: #f5f5f5;
+    border-radius: 3px;
+    z-index: 1;
 }
+
 .board-column-header {
-  position: relative;
   height: 50px;
   line-height: 50px;
   overflow: hidden;
@@ -55,19 +61,21 @@
 .board-column.done .board-column-header {
   background: #66B85A;
 }
-/* This is the secret sauce,
+
+
+/*
    always use a wrapper for setting
    the "overflow: scroll/auto"  */
 .board-column-content-wrapper {
-  overflow: scroll;
   position: relative;
   height: 100%;
   overflow-y: auto;
   max-height: 450px;
 }
-/* Never ever set "overflow: auto/scroll"
-   to the muuri element, stuff will break  FARGE PÅ SKRIFT */
+
+
 .board-column-content {
+  overflow: scroll;
   overflow: hidden;
   position: relative;
   border: 10px solid transparent;
@@ -77,25 +85,12 @@
 /* farge på innhold/skrift */
 .board-item {
   overflow: hidden;
-  position: absolute;
   width: 100%;
   margin: 5px 0;
 }
-  .board-item.muuri-item-releasing {
-  z-index: 9998;
 
-}
-.board-item.muuri-item-dragging {
-  z-index: 9999;
-  cursor: move;
-}
-
-.board-item.muuri-item-hidden {
-  z-index: 0;
-}
 
 .board-item-content {
-  position: relative;
   padding: 15px;
   background:#fff;
   font-size: 25px;
@@ -103,7 +98,14 @@
   cursor: grab;
   -webkit-box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
   box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
+  margin: 5px;
 } 
+
+.draggable{
+    width: 100px;
+    height: 100px;
+    z-index: 1000;
+}
 
 .board-item-content {
   position: relative;
@@ -403,29 +405,26 @@ left: 20px;
   cursor: pointer;
 }
 
+
 /* test select box styling */
 
 .selectdiv {
-  content: '<>';
-  position: absolute;
-  /*Don't really need this just for demo styling*/
   top: 83px;
   min-width: 200px;
+  position: fixed;
+  z-index: 5;
+  left: 30px;
 }
 
 .selectdiv:after {
-  content: '<>';
   font: 17px "Consolas", monospace;
   color: #333;
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
-  /*Adjust for position however you want*/
-    padding: 0 0 2px;
+  padding: 0 0 2px;
   border-bottom: 1px solid #999;
-  /*left line */
-  
   position: absolute;
   pointer-events: none;
 }
