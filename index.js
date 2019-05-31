@@ -116,7 +116,7 @@ function addItemTodo(input){
 
 
     // legge til "ansatte" til item
-    var select=document.getElementById("Group");
+    var select = document.getElementById("Group");
     var arr = ["Danial", "Thomas", "Umu", "Martin", "Benjamin"];
 
     var option = document.createElement("DIV");
@@ -155,7 +155,7 @@ function addItemTodo(input){
 
     // lagre tasks med info til objekt
     var taskSave = {
-    Task: item.textContent,
+    Task: item.textContent, // her kommer det ut member på item -- > needs fixin !!!!!
     Label: label.id,
     Member: option.id,
     };
@@ -211,5 +211,4 @@ function displayCardInfo(){
         }
     }
 }
-
 displayCardInfo()
