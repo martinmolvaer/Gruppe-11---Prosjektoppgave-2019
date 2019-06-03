@@ -8,6 +8,12 @@
     type = "text/css"
     href = "style.css" />
     <title>Todo</title>
+    <img  src="banana.png" id="banan">
+
+    
+
+
+
     
 </head>
 <body>
@@ -42,11 +48,9 @@
 
  
 
-<div class="board">
+<div class="board" id="board">
   <div class="board-column todo">
     <div class="board-column-header" id="todo-header">To do</div>
-    <img  src="banana.png" id="banan">
-
     <div class="board-column-content-wrapper">
     <div class="board-column-content" id="todo">
     </div>
@@ -79,6 +83,7 @@
   <form class="form-container">
 
   <button type= "button" class="btn" id="cardInfoBtn">Informasjon om kort</button>
+  
   <div id="myModal" class="modal"><div>
   <span class="close">&times;</span>
      <div class="modal-content">
@@ -88,6 +93,7 @@
         Member: Martin
         </div>
     </div>
+    
 </div>
   <button type="button" class="btn" id="invertBtn" onclick ="setInvert()">Hjelp meg med å se</button>
   <button type="button" class="btn cancel" id="cancelBtn" onclick="closeForm()">Lukk</button>

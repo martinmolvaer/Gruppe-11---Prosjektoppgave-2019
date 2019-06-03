@@ -11,6 +11,7 @@ var input = document.getElementById('item');
 var label = document.getElementById('viktig');
 
 
+
 //Adding information to the "memberSave" to be displayed
 var memberSave = (localStorage.getItem('data')) ? JSON.parse(localStorage.getItem('data')) : 
 
@@ -80,6 +81,8 @@ input.onkeyup = e => {
 
 function addItemTodo(text){
 
+    var board = document.getElementById('board');
+
     //lage div til todo og div til items
     var list = document.getElementById('todo')
     var item = document.createElement('div');
@@ -106,6 +109,12 @@ function addItemTodo(text){
     item.style.display = 'none';
     // få grid til å refreshe array.slice ?? 
     })
+
+
+    var test = document.createElement('div');
+
+    // FIKS Å FÅ OPP ET VINDU DER MAN KAN EDITE CONTENTET !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 
 
     //make labels
@@ -159,6 +168,29 @@ function addItemTodo(text){
     option.setAttribute('id', "Benjamin")
     }
 
+      info.addEventListener('click', function(){
+
+      var test = document.createElement('input');
+      test.classList = "input-display";
+      board.appendChild(test);
+
+      test.onkeyup = e => {
+
+      if(e.keyCode == 13){
+
+      
+      item.innerText = test.value;
+      test.style.display = "none";
+      item.appendChild(remove);
+      item.appendChild(info);
+      item.appendChild(option);
+      item.appendChild(label);
+
+    }
+    };
+
+    });
+
 
     //legge til items til hoved-div
     item.appendChild(label);
@@ -176,8 +208,8 @@ function addItemTodo(text){
     //legge tasks med info fra objekt til i array
     memberSave.push(taskSave);
     getLocalStorage();
-
     }
+
 
 // POP-UP JS 
 
