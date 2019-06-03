@@ -345,7 +345,6 @@ left: 20px;
 .form-container {
   width: 300px;
   padding: 10px;
-  animation: popup 0.7s;
 }
 /* Set a style for the submit/login button */
 .form-container .btn {

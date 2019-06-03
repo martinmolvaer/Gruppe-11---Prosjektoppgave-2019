@@ -185,6 +185,8 @@ function closeForm() {
 }
 
 function setInvert(){
+  //document.getElementById("header").style.filter ="hue-rotate(90deg)";
+  document.getElementsByTagName("body").style.filter ="hue-rotate(90deg)";
 }   
 
 
