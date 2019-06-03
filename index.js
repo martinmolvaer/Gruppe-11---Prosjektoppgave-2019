@@ -99,7 +99,6 @@ function addItemTodo(text) {
 
   var test = document.createElement("div");
 
-  // FIKS Å FÅ OPP ET VINDU DER MAN KAN EDITE CONTENTET !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
   //make labels
   var label = document.createElement("div");
@@ -147,14 +146,19 @@ function addItemTodo(text) {
   }
 
   info.addEventListener("click", function() {
-    var test = document.createElement("input");
-    test.classList = "input-display";
-    board.appendChild(test);
+    var editInput = document.createElement("input");
+    var inputEditText = document.createElement('h1');
+    inputEditText.innerHTML = "Edit your task"
+    inputEditText.classList = "displayEditText"
+    editInput.classList = "input-display";
+    board.appendChild(editInput);
+    board.appendChild(inputEditText);
 
-    test.onkeyup = e => {
-      if (e.keyCode == 13) {
-        item.innerText = test.value;
-        test.style.display = "none";
+    editInput.onkeyup = e => {
+      if (e.keyCode == 13 && editInput.value) {
+        item.innerText = editInput.value;
+        editInput.style.display = "none";
+        inputEditText.style.display = "none";
         item.appendChild(remove);
         item.appendChild(info);
         item.appendChild(option);

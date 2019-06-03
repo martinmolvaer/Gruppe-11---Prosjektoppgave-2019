@@ -1,3 +1,19 @@
+#jungle {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    background-color: red;
+}
 #banan{
-    display: block;
+    width: 500px;
+    height: 500px;
+    color: red;
+    position: absolute;
+}
+
+#bin{
+    width: 500px;
+    height: 500px;
+    color: red;
+    position: absolute;
 }
