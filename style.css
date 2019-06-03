@@ -1,4 +1,3 @@
-
 .board {
   position: relative;
   margin-left: 1%;
@@ -14,22 +13,22 @@
   margin: 0 1.5%;
   background: #f5f5f5;
   border-radius: 3px;
-  z-index: 1;  
+  z-index: 1;
   position: absolute;
 
 }
 
-.board-column-working{
+.board-column-working {
   position: absolute;
-left: 33%;
+  left: 33%;
   width: 30%;
-    margin: 0 1.5%;
-    background: #f5f5f5;
-    border-radius: 3px;
-    z-index: 1;
-  }
+  margin: 0 1.5%;
+  background: #f5f5f5;
+  border-radius: 3px;
+  z-index: 1;
+}
 
-.board-column-done{
+.board-column-done {
   position: absolute;
   left: 66%;
   width: 30%;
@@ -62,12 +61,14 @@ left: 33%;
 .board-column.todo .board-column-header {
   background: #339DA4;
 }
+
 /* doing-header */
 
 .board-column-working .board-column-header {
   background: #e7ce89;
 
 }
+
 /* done-header */
 .board-column-done .board-column-header {
   background: #66B85A;
@@ -92,8 +93,9 @@ left: 33%;
   cursor: pointer;
   border: 10px solid transparent;
   min-height: 95px;
-  
+
 }
+
 /* farge på innhold/skrift */
 .board-item {
   position: absolute;
@@ -102,13 +104,13 @@ left: 33%;
   margin: 5px 0;
 }
 
-.input-display{
+.input-display {
   width: 300px;
   height: 100px;
   color: #fff;
   display: block;
-  background-color: rgb(0,0,0);
-  background-color: rgb(0,0,0,0.7);
+  background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0, 0.7);
   position: absolute;
   z-index: 100090;
 }
@@ -118,14 +120,14 @@ left: 33%;
 .board-item-content {
   position: relative;
   padding: 15px;
-  background:#fff;
+  background: #fff;
   font-size: 20px;
   border: 1px black solid;
   cursor: grab;
-  -webkit-box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
-  box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
   margin: 5px;
-} 
+}
 
 
 .board-item-content {
@@ -135,8 +137,8 @@ left: 33%;
   border-radius: 10px;
   font-size: 1x;
   cursor: pointer;
-  -webkit-box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
-  box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
 
@@ -144,6 +146,7 @@ left: 33%;
   .board-item-content {
     text-align: center;
   }
+
   .board-item-content span {
     display: none;
   }
@@ -157,7 +160,9 @@ body {
   padding: 80px 0 0 0;
 }
 
-body, input, button {
+body,
+input,
+button {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -205,10 +210,10 @@ header button {
   width: 50px;
   height: 50px;
 
-  position:absolute;
-  top:25px;
-  right:50px;
-  z-index:2;
+  position: absolute;
+  top: 25px;
+  right: 50px;
+  z-index: 2;
 
   border-radius: 25px;
   background: #fff;
@@ -221,7 +226,7 @@ header button {
   -moz-appearance: none;
 }
 
-header button svg{
+header button svg {
   width: 20px;
 }
 
@@ -229,7 +234,7 @@ header button svg .fill {
   fill: #FF7133;
 }
 
-#banan{
+#banan {
   z-index: 1000;
   top: 150px;
   margin: 20px;
@@ -238,14 +243,16 @@ header button svg .fill {
   animation: rotate 1s ease-in-out infinite;
 }
 
-@keyframes rotate{
-  0%{
+@keyframes rotate {
+  0% {
     transform: rotate(90deg)
   }
-  50%{
+
+  50% {
     transform: rotate(45deg)
   }
-  100%{
+
+  100% {
     transform: rotate(90deg);
   }
 }
@@ -256,55 +263,53 @@ header button svg .fill {
   padding: 15px;
 }
 
-.remove{
+.remove {
   width: 15px;
   height: 15px;
-  
+
 }
 
-.info{
+.info {
   width: 15px;
   height: 15px;
   float: right;
   margin: -10px;
 }
 
-.remove svg:hover{
-fill: rgb(224, 97, 38);
+.remove svg:hover {
+  fill: rgb(224, 97, 38);
 }
 
-.info svg:hover{
+.info svg:hover {
   fill: blue;
 }
 
-#viktig{
+#viktig {
   position: absolute;
   z-index: 5;
   left: 25px;
 }
 
-#Group{
+#Group {
   position: absolute;
   z-index: 5;
   left: 150px;
 }
 
-.ansatt{
-    color: #FF7133;
-    font-size: 15px;
-    font-weight: 900;
+.ansatt {
+  color: #FF7133;
+  font-size: 15px;
+  font-weight: 900;
 }
 
 /* icons for viktighet */
-.label{
+.label {
   width: 15px;
   float: right;
   margin: -10px;
 }
 
-.label:hover{
-
-}
+.label:hover {}
 
 /* POP UP CSS */
 
@@ -335,11 +340,13 @@ fill: rgb(224, 97, 38);
   left: 15px;
   z-index: 9;
 }
+
 /* Add styles to the form container */
 .form-container {
   width: 300px;
   padding: 10px;
 }
+
 /* Set a style for the different buttons in form */
 .form-container .btn {
   background-color: #FF7133;
@@ -348,37 +355,39 @@ fill: rgb(224, 97, 38);
   border-radius: 90px;
   cursor: pointer;
   width: 250px;
-  margin-bottom:10px;
-  opacity: 0.8  ;
+  margin-bottom: 10px;
+  opacity: 0.8;
   font-size: 15px;
 }
 
 .open-button:hover {
-    filter: saturate(4);
+  filter: saturate(4);
 }
 
-.form-container .btn:hover{
-    filter : saturate(4);
+.form-container .btn:hover {
+  filter: saturate(4);
 }
+
 /* Add a red background color to the cancel button */
 .form-container .cancel {
   background-color: #FF7133;
 }
 
 /* CSS for modal-popup */
-.modal{
-  display : none;
-  position : fixed;
-  z-index : 100000;
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
 }
-.modal-content{
+
+.modal-content {
   margin: auto;
   display: block;
   width: 100%;
@@ -393,15 +402,16 @@ fill: rgb(224, 97, 38);
   border: 2px solid black;
   font-size: 15px;
 }
-.close{
+
+.close {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-.close:hover, 
-.close:focus{
+.close:hover,
+.close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
@@ -453,10 +463,10 @@ fill: rgb(224, 97, 38);
   word-break: normal;
 }
 
-#groupselect{
+#groupselect {
   left: 60px;
 }
 
-#labelselect{
+#labelselect {
   left: 0px;
 }
