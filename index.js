@@ -201,8 +201,19 @@ function setInvert(){
       document.getElementById("cardInfoBtn").style.filter ="hue-rotate(-120deg)";
       document.getElementById("cancelBtn").style.filter ="hue-rotate(190deg)";
       document.getElementById("done-header").style.filter="hue-rotate(120deg)";
+      document.getElementById("done-header").style.fontWeight="900";
       document.getElementById("working-header").style.filter="hue-rotate(120deg)";
+      document.getElementById("working-header").style.fontWeight="900";
       document.getElementById("todo-header").style.filter="hue-rotate(120deg)";
+      document.getElementById("todo-header").style.fontWeight="900";
+      document.getElementById("viktig").style.fontWeight="900";
+      document.getElementById("Group").style.fontWeight="900";
+      document.getElementById("item").style.fontWeight="900";
+      document.getElementById("cardInfoBtn").style.fontWeight="900";
+      document.getElementById("cancelBtn").style.fontWeight="900";
+      document.getElementById("invertBtn").style.fontWeight="900";
+      document.getElementById("help-btn").style.fontWeight="900";
+      document.body.style.fontSize="30px";
       change = 2;
     } else {
       document.getElementById("header").style.filter ="hue-rotate(0deg)";
@@ -211,8 +222,19 @@ function setInvert(){
       document.getElementById("cardInfoBtn").style.filter ="hue-rotate(0deg)";
       document.getElementById("cancelBtn").style.filter ="hue-rotate(0deg)";
       document.getElementById("done-header").style.filter="hue-rotate(0deg)";
+      document.getElementById("done-header").style.fontWeight="normal";
       document.getElementById("working-header").style.filter="hue-rotate(0deg)";
+      document.getElementById("working-header").style.fontWeight="normal";
       document.getElementById("todo-header").style.filter="hue-rotate(0deg)";
+      document.getElementById("todo-header").style.fontWeight="normal";
+      document.getElementById("viktig").style.fontWeight="normal";
+      document.getElementById("Group").style.fontWeight="normal";
+      document.getElementById("item").style.fontWeight="normal";
+      document.getElementById("cardInfoBtn").style.fontWeight="normal";
+      document.getElementById("cancelBtn").style.fontWeight="normal";
+      document.getElementById("invertBtn").style.fontWeight="normal";
+      document.getElementById("help-btn").style.fontWeight="normal";
+      document.body.style.fontSize="15px";
       change = 1;
     }   
   }
