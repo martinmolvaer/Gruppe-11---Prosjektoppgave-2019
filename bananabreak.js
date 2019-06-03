@@ -7,11 +7,23 @@ banan.addEventListener('click', function(){
     
   });
 
-var bin = document.getElementById("bin");
-var sortable = Sortable.create(bin, {
+
+var tree = document.getElementById("tree");
+var sortable = Sortable.create(tree, {
   group: {
-    name: "bin",
+    name: "tree",
     pull: true,
-    put: ["banan"]
+    put: ["jungle", "tree"]
   }
 });
+
+
+var jungle = document.getElementById("jungle");
+var sortable = Sortable.create(jungle, {
+  group: {
+    name: "jungle",
+    pull: true,
+    put: ["tree", 'jungle']
+  }
+});
+
