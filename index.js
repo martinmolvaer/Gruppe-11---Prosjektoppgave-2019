@@ -1,10 +1,20 @@
+
+
+
+function getLocalStorage(){
+
+  localStorage.setItem('data', JSON.stringify(memberSave));
+
+}
 //Instansiating important DOM
 var input = document.getElementById('item');
 var label = document.getElementById('viktig');
 
 
 //Adding information to the "memberSave" to be displayed
-var memberSave = [];
+var memberSave = (localStorage.getItem('data')) ? JSON.parse(localStorage.getItem('data')) : 
+
+[];
 
 
 //implementing sortablejs
@@ -166,10 +176,9 @@ function addItemTodo(text){
     };
     //legge tasks med info fra objekt til i array
     memberSave.push(taskSave);
+    getLocalStorage();
+
     }
-
-
-
 
 // POP-UP JS 
 

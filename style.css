@@ -4,7 +4,7 @@
   margin-left: 1%;
   top: 100px;
   font-family: 'Roboto', sans-serif;
-
+  font-weight: 400;
 
 }
 
@@ -107,8 +107,8 @@ left: 33%;
   position: relative;
   padding: 15px;
   background:#fff;
-  font-size: 25px;
-  border: 2px white solid;
+  font-size: 20px;
+  border: 1px black solid;
   cursor: grab;
   -webkit-box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
   box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
@@ -167,7 +167,7 @@ header {
 
 /* teksten i input-feltet */
 header input {
-  width: 90%;
+  width: 95%;
   height: 50px;
   float: left;
   color: #fff;
@@ -189,25 +189,13 @@ header input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.75);
 }
 
-header input:-moz-input-placeholder {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-header input::-moz-input-placeholder {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-header input:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.75);
-}
-
 header button {
   width: 50px;
   height: 50px;
 
   position:absolute;
   top:25px;
-  right:75px;
+  right:50px;
   z-index:2;
 
   border-radius: 25px;
@@ -221,17 +209,6 @@ header button {
   -moz-appearance: none;
 }
 
-header button svg {
-  width: 16px;
-  height: 16px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -8px 0 0 -8px;
-}
-
-
-
 header button svg .fill {
   fill: #FF7133;
 }
@@ -242,47 +219,25 @@ header button svg .fill {
   padding: 15px;
 }
 
-ul.todo {
-  width: 100%;
-  float: left;
-}
-
-ul.todo li {
-  position: relative;
-  padding: 20px;
-  right: 53px;
-  background: #fff;
-  border-radius: 4px;
-  font-size: 17px;
-  cursor: pointer;
-  -webkit-box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
-  box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
-}
-
-ul.todo li:last-of-type {
-  margin: 0;
-}
-
 .remove{
   width: 15px;
   height: 15px;
-  float: right;
-  margin: -17px;
+  
 }
 
 .info{
   width: 20px;
   height: 20px;
-  float: right;
-  margin: 5px;
-  top: 5px;
-  left: 265px;
+  left: 300px;
 }
 
 .remove svg:hover{
 fill: rgb(224, 97, 38);
 }
 
+.info svg:hover{
+  fill: blue;
+}
 
 #viktig{
   position: absolute;
@@ -294,13 +249,13 @@ fill: rgb(224, 97, 38);
   position: absolute;
   z-index: 5;
   left: 150px;
-
 }
 
 .ansatt{
     color: red;
     font-size: 10px;
-    left: 20px;    
+    float: right;
+    right: 90px;
 }
 
 /* icons for viktighet */
