@@ -202,9 +202,6 @@ var span = document.getElementsByClassName("close");
 function displayCardInfo(){
     cardInfoBtn.onclick = function() {
         modal.style.display = "block";
-    } 
-
-        modal.style.display = "block";
         span.onclick = function() {
         modal.style.display = "none";
     }
@@ -215,5 +212,5 @@ function displayCardInfo(){
             modal.style.display = "none";
         }
     }
-}
-displayCardInfo()
+}}
+displayCardInfo();
