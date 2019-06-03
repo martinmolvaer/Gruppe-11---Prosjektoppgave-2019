@@ -40,7 +40,6 @@ var sortable = Sortable.create(done, {
 
 
 
-
 // Adding items to addItemTodo - Click + icon or press Enter button. 
 //Should return nothing if nothing is typed in to the input-field.
 document.getElementById('add').addEventListener('click', function(){
