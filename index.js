@@ -24,7 +24,7 @@ var sortable = Sortable.create(todo, {
     group: {
         name: 'todo',
         pull: true,
-        put: ['todo', 'doing', 'done']
+        put: ['todo', 'doing', 'done',]
     }
 });
 
@@ -47,7 +47,6 @@ var sortable = Sortable.create(done, {
         put: ['todo', 'doing', 'done']
     }
 })
-
 
 
 // Adding items to addItemTodo - Click + icon or press Enter button. 
@@ -132,7 +131,7 @@ function addItemTodo(text){
 
     // legge til "ansatte" til item
     var select = document.getElementById("Group");
-    var arr = ["Danial", "Thomas", "Umu", "Martin", "Benjamin"];
+    var arr = ["D", "T", "U", "M", "B"];
 
     var option = document.createElement("DIV");
     option.classList.add('ansatt');
