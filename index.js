@@ -183,12 +183,30 @@ function closeForm() {
   document.getElementById('help-btn').style.display = "block";
 
 }
-
+var change = 1;
 function setInvert(){
-  //document.getElementById("header").style.filter ="hue-rotate(90deg)";
-  document.getElementsByTagName("body").style.filter ="hue-rotate(90deg)";
-}   
-
+   if(change == 1){ 
+      document.getElementById("header").style.filter ="hue-rotate(90deg)";
+      document.getElementById("invertBtn").style.filter ="hue-rotate(-19deg)";
+      document.getElementById("help-btn").style.filter ="hue-rotate(-290deg)";
+      document.getElementById("cardInfoBtn").style.filter ="hue-rotate(-120deg)";
+      document.getElementById("cancelBtn").style.filter ="hue-rotate(190deg)";
+      document.getElementById("done-header").style.filter="hue-rotate(120deg)";
+      document.getElementById("working-header").style.filter="hue-rotate(120deg)";
+      document.getElementById("todo-header").style.filter="hue-rotate(120deg)";
+      change = 2;
+    } else {
+      document.getElementById("header").style.filter ="hue-rotate(0deg)";
+      document.getElementById("invertBtn").style.filter ="hue-rotate(0deg)";
+      document.getElementById("help-btn").style.filter ="hue-rotate(0deg)";
+      document.getElementById("cardInfoBtn").style.filter ="hue-rotate(0deg)";
+      document.getElementById("cancelBtn").style.filter ="hue-rotate(0deg)";
+      document.getElementById("done-header").style.filter="hue-rotate(0deg)";
+      document.getElementById("working-header").style.filter="hue-rotate(0deg)";
+      document.getElementById("todo-header").style.filter="hue-rotate(0deg)";
+      change = 1;
+    }   
+  }
 
 // Get the modal
 var modal = document.getElementById("myModal");

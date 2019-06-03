@@ -42,7 +42,7 @@
 
 <div class="board">
   <div class="board-column todo">
-    <div class="board-column-header">To do</div>
+    <div class="board-column-header" id="todo-header">To do</div>
     <div class="board-column-content-wrapper">
     <div class="board-column-content" id="todo">
     </div>
@@ -50,7 +50,7 @@
     </div>
 
     <div class="board-column-working">
-    <div class="board-column-header">Working</div>
+    <div class="board-column-header" id="working-header">Working</div>
     <div class="board-column-content-wrapper">
     <div class="board-column-content" id="doing">
     </div>
@@ -59,7 +59,7 @@
 
 
     <div class="board-column-done">
-    <div class="board-column-header">Done</div>
+    <div class="board-column-header" id="done-header">Done</div>
     <div class="board-column-content-wrapper">
     <div class="board-column-content" id="done">
     </div>
@@ -85,8 +85,8 @@
         </div>
     </div>
 </div>
-  <button type="button" onclick ="setInvert()">Hjelp meg med å se</button>
-  <button type="button" class="btn cancel" onclick="closeForm()">Lukk</button>
+  <button type="button" class="btn" id="invertBtn" onclick ="setInvert()">Hjelp meg med å se</button>
+  <button type="button" class="btn cancel" id="cancelBtn" onclick="closeForm()">Lukk</button>
   </form>
 </div>
 

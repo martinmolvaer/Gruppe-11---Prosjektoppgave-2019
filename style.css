@@ -276,7 +276,7 @@ ul.todo li:last-of-type {
   float: right;
   margin: 5px;
   top: 5px;
-  left: 265px;
+  left: 265px;  
 }
 
 .remove svg:hover{
