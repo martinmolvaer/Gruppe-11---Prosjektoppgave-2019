@@ -238,6 +238,18 @@ function setInvert(){
     }   
   }
 
+
+  const mybutton=document.getElementById('invertBtn');
+
+
+/*
+mybutton.addEventListener('click', () => { 
+  var rannumber1=Math.floor(Math.random() * 256 ); 
+  var rannumber2=Math.floor(Math.random() * 256 ); 
+  var rannumber3=Math.floor(Math.random() * 256 ); 
+  var ranrgb="rgb("+rannumber1+","+rannumber2+","+rannumber3+")";
+  document.getElementById("header").style.backgroundColor=ranrgb; });
+*/
 // Get the modal
 var modal = document.getElementById("myModal");
 
