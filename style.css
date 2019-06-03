@@ -209,8 +209,33 @@ header button {
   -moz-appearance: none;
 }
 
+header button svg{
+  width: 20px;
+}
+
 header button svg .fill {
   fill: #FF7133;
+}
+
+#banan{
+  z-index: 1000;
+  top: 150px;
+  margin: 20px;
+  left: 700px;
+  float: right;
+  animation: rotate 1s ease-in-out infinite;
+}
+
+@keyframes rotate{
+  0%{
+    transform: rotate(90deg)
+  }
+  50%{
+    transform: rotate(45deg)
+  }
+  100%{
+    transform: rotate(90deg);
+  }
 }
 
 .container {
@@ -226,9 +251,10 @@ header button svg .fill {
 }
 
 .info{
-  width: 20px;
-  height: 20px;
-  left: 300px;
+  width: 15px;
+  height: 15px;
+  float: right;
+  margin: -10px;
 }
 
 .remove svg:hover{
@@ -252,19 +278,20 @@ fill: rgb(224, 97, 38);
 }
 
 .ansatt{
-    color: red;
-    font-size: 10px;
-    float: right;
-    right: 90px;
+    color: #FF7133;
+    font-size: 15px;
+    font-weight: 900;
 }
 
 /* icons for viktighet */
 .label{
   width: 15px;
-  height: 15px;
   float: right;
-  left: 200px;
-  top: 5px;
+  margin: -10px;
+}
+
+.label:hover{
+
 }
 
 /* POP UP CSS */
