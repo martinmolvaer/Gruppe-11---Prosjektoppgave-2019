@@ -206,8 +206,7 @@ function setInvert() {
     document.getElementById("cancelBtn").style.filter = "hue-rotate(190deg)";
     document.getElementById("done-header").style.filter = "hue-rotate(120deg)";
     document.getElementById("done-header").style.fontWeight = "900";
-    document.getElementById("working-header").style.filter =
-      "hue-rotate(120deg)";
+    document.getElementById("working-header").style.filter ="hue-rotate(120deg)";
     document.getElementById("working-header").style.fontWeight = "900";
     document.getElementById("todo-header").style.filter = "hue-rotate(120deg)";
     document.getElementById("todo-header").style.fontWeight = "900";
