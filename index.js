@@ -7,7 +7,7 @@ var label = document.getElementById("viktig");
 var banan = document.getElementById("banan");
 
 banan.addEventListener("click", function() {
-  location.href = "bananabreak.html";
+  banan.style.display = "none";
 });
 
 //Adding information to the "memberSave" to be displayed
@@ -50,12 +50,14 @@ var sortable = Sortable.create(done, {
 //Should return nothing if nothing is typed in to the input-field.
 document.getElementById("add").addEventListener("click", function() {
   var value = document.getElementById("item").value;
+  var addbtn = document.getElementById('add');
 
   if (value === "") {
   } else {
     addItemTodo(value);
     document.getElementById("item").value = "";
   }
+
 });
 
 // enter for å legge til task
@@ -65,6 +67,7 @@ input.onkeyup = e => {
   if (e.keyCode == 13 && value) {
     addItemTodo(input.value);
     input.value = "";
+    addbtn.style.WebkitAnimationPlayState = "running";
   }
 };
 

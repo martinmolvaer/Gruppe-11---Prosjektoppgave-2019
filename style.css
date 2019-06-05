@@ -237,12 +237,25 @@ header button {
   -moz-appearance: none;
 }
 
+@keyframes buttonanim{
+  0%{
+    transform: rotate(90deg);
+  }
+  100%{
+    transform: rotate(-90deg);
+  }
+}
+
 header button svg {
-  width: 20px;
+  width: 35px;
+  animation: buttonanim 1s ease-in-out;
+
+
 }
 
 header button svg .fill {
-  fill: #FF7133;
+  fill: #d29b6e;
+
 }
 
 #banan {
