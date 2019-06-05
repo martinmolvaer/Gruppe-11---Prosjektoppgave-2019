@@ -18,7 +18,7 @@
 
 }
 
-.board-column-working {
+.board-column-doing {
   position: absolute;
   left: 33%;
   width: 30%;
@@ -64,7 +64,7 @@
 
 /* doing-header */
 
-.board-column-working .board-column-header {
+.board-column-doing .board-column-header {
   background: #e7ce89;
 
 }
@@ -319,7 +319,7 @@ header button svg .fill {
 
 .buttons{
   position: absolute;
-  padding: 20px;
+  padding: 22px;
   display: flex;
   justify-content:space-evenly;
   flex-basis: 200px;
