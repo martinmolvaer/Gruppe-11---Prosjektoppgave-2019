@@ -105,6 +105,7 @@ function addItemTodo(text) {
   buttons.classList.add('buttons');
   item.appendChild(buttons);
 
+
   //make labels
   var label = document.createElement("div");
   label.classList.add("label");
@@ -168,6 +169,7 @@ function addItemTodo(text) {
         buttons.appendChild(option);
         buttons.appendChild(label);
         item.appendChild(buttons);
+
       }
     };
   });

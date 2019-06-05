@@ -272,7 +272,9 @@ header button svg .fill {
   padding: 15px;
 }
 
-
+.remove {
+  margin-left: 120px;
+}
 .remove svg:hover {
   fill: rgb(224, 97, 38);
 }
@@ -317,16 +319,17 @@ header button svg .fill {
 }
 
 .buttons{
-  margin: auto;
+  position: absolute;
+  padding: 20px;
   display: flex;
-  justify-content: space-evenly;
 }
+
 
 
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
-  background-color: #FF7133;
+  background-color: #ffd553;
   color: black;
   padding: 16px 20px;
   border: none;
@@ -358,7 +361,7 @@ header button svg .fill {
 
 /* Set a style for the different buttons in form */
 .form-container .btn {
-  background-color: #FF7133;
+  background-color: #ffd553;
   padding: 16px 20px;
   border: none;
   border-radius: 90px;
@@ -379,7 +382,7 @@ header button svg .fill {
 
 /* Add a red background color to the cancel button */
 .form-container .cancel {
-  background-color: #FF7133;
+  background-color: #ffd553;
 }
 
 /* CSS for modal-popup */
