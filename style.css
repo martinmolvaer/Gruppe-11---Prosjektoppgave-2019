@@ -237,25 +237,12 @@ header button {
   -moz-appearance: none;
 }
 
-@keyframes buttonanim{
-  0%{
-    transform: rotate(90deg);
-  }
-  100%{
-    transform: rotate(-90deg);
-  }
-}
-
 header button svg {
-  width: 35px;
-  animation: buttonanim 1s ease-in-out;
-
-
+  width: 20px;
 }
 
 header button svg .fill {
-  fill: #d29b6e;
-
+  fill: #FF7133;
 }
 
 #banan {
@@ -424,21 +411,6 @@ header button svg .fill {
   font-size: 15px; 
   font-weight: 500;
 }
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 
 /* test select box styling */
 

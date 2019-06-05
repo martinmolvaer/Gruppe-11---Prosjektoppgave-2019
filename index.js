@@ -263,14 +263,12 @@ var modal = document.getElementById("myModal");
 var btn = document.getElementById("cardInfoBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close");
+var span1 = document.getElementsByClassName("close");
 
 // When the user clicks on the button, open the modal
 function displayCardInfo() {
   cardInfoBtn.onclick = function() {
     modal.style.display = "block";
-    span.onclick = function() {
-      modal.style.display = "none";
     };
 
     // When the user clicks anywhere outside of the modal, close it
@@ -280,5 +278,5 @@ function displayCardInfo() {
       }
     };
   };
-}
+
 displayCardInfo();
