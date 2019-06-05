@@ -321,6 +321,9 @@ header button svg .fill {
   position: absolute;
   padding: 20px;
   display: flex;
+  justify-content:space-evenly;
+  flex-basis: 200px;
+  
 }
 
 
@@ -407,7 +410,7 @@ header button svg .fill {
   max-width: 700px;
   width: 700px;
   margin: 5px;
-  left: 450px;
+  left: 23%;
   top: 300px;
   background-color: #fff;
   border: 2px solid black;

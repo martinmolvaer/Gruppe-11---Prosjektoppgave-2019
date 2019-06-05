@@ -206,16 +206,13 @@ function closeForm() {
 var change = 1;
 function setInvert() {
   if (change == 1) {
-    document.getElementById("header").style.filter = "hue-rotate(90deg)";
-    document.getElementById("invertBtn").style.filter = "hue-rotate(-19deg)";
-    document.getElementById("help-btn").style.filter = "hue-rotate(-290deg)";
-    document.getElementById("cardInfoBtn").style.filter = "hue-rotate(-120deg)";
-    document.getElementById("cancelBtn").style.filter = "hue-rotate(190deg)";
-    document.getElementById("done-header").style.filter = "hue-rotate(120deg)";
+    document.getElementById("header").style.background = "#add8e6";
+    document.getElementById("done-header").style.background = "#000000";
     document.getElementById("done-header").style.fontWeight = "900";
-    document.getElementById("working-header").style.filter ="hue-rotate(120deg)";
+    document.getElementById("done-header").style.color="#fff"
+    document.getElementById("working-header").style.background ="#ffff00";
     document.getElementById("working-header").style.fontWeight = "900";
-    document.getElementById("todo-header").style.filter = "hue-rotate(120deg)";
+    document.getElementById("todo-header").style.background = "#ff0000";
     document.getElementById("todo-header").style.fontWeight = "900";
     document.getElementById("viktig").style.fontWeight = "900";
     document.getElementById("Group").style.fontWeight = "900";
@@ -227,16 +224,12 @@ function setInvert() {
     document.body.style.fontSize = "30px";
     change = 2;
   } else {
-    document.getElementById("header").style.filter = "hue-rotate(0deg)";
-    document.getElementById("invertBtn").style.filter = "hue-rotate(0deg)";
-    document.getElementById("help-btn").style.filter = "hue-rotate(0deg)";
-    document.getElementById("cardInfoBtn").style.filter = "hue-rotate(0deg)";
-    document.getElementById("cancelBtn").style.filter = "hue-rotate(0deg)";
-    document.getElementById("done-header").style.filter = "hue-rotate(0deg)";
+    document.getElementById("header").style.background = "#ffd553";
+    document.getElementById("done-header").style.background = "#66B85A";
     document.getElementById("done-header").style.fontWeight = "normal";
-    document.getElementById("working-header").style.filter = "hue-rotate(0deg)";
+    document.getElementById("working-header").style.background = "#e7ce89";
     document.getElementById("working-header").style.fontWeight = "normal";
-    document.getElementById("todo-header").style.filter = "hue-rotate(0deg)";
+    document.getElementById("todo-header").style.background = "#339DA4";
     document.getElementById("todo-header").style.fontWeight = "normal";
     document.getElementById("viktig").style.fontWeight = "normal";
     document.getElementById("Group").style.fontWeight = "normal";
