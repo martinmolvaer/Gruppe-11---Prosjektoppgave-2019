@@ -50,7 +50,6 @@ var sortable = Sortable.create(done, {
 //Should return nothing if nothing is typed in to the input-field.
 document.getElementById("add").addEventListener("click", function() {
   var value = document.getElementById("item").value;
-  var addbtn = document.getElementById('add');
 
   if (value === "") {
   } else {
@@ -63,6 +62,8 @@ document.getElementById("add").addEventListener("click", function() {
 // enter for å legge til task
 input.onkeyup = e => {
   var value = document.getElementById("item").value;
+  var addbtn = document.getElementById('add');
+
 
   if (e.keyCode == 13 && value) {
     addItemTodo(input.value);
@@ -100,8 +101,9 @@ function addItemTodo(text) {
     // få grid til å refreshe array.slice ??
   });
 
-  var test = document.createElement("div");
-
+  var buttons = document.createElement('div');
+  buttons.classList.add('buttons');
+  item.appendChild(buttons);
 
   //make labels
   var label = document.createElement("div");
@@ -110,8 +112,7 @@ function addItemTodo(text) {
     '<?xml version="1.0" encoding="UTF-8"?><svg enable-background="new 0 0 511.996 511.996" version="1.1" viewBox="0 0 511.996 511.996" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"> <path d="m256.03 511.96c-65.578 0-131.16-24.962-181.08-74.885-6.378-6.378-6.38-16.72 0-23.099 6.378-6.378 16.72-6.38 23.1 0 87.11 87.11 228.85 87.11 315.96 0 87.11-87.11 87.11-228.85 0-315.96-87.11-87.11-228.85-87.11-315.96 0-56.361 56.361-78.483 139.24-57.733 216.3 2.345 8.711-2.814 17.673-11.525 20.018-8.707 2.345-17.673-2.814-20.018-11.525-23.783-88.306 1.575-183.29 66.173-247.89 99.849-99.849 262.31-99.847 362.16 0 99.847 99.849 99.847 262.31 0 362.16-49.925 49.923-115.5 74.886-181.08 74.886z" fill="#507C5C"/> <circle cx="256.04" cy="256.01" r="154.6" fill="#CFF09E"/><path d="m256.03 426.92c-94.246 0-170.92-76.675-170.92-170.92s76.675-170.92 170.92-170.92 170.92 76.675 170.92 170.92-76.676 170.92-170.92 170.92zm0-309.18c-76.234 0-138.26 62.021-138.26 138.26s62.021 138.26 138.26 138.26 138.26-62.021 138.26-138.26-62.021-138.26-138.26-138.26z" fill="#507C5C"/></svg>';
   var yellowLabelSVG =
     '<?xml version="1.0" encoding="UTF-8"?><svg class="" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path class="active-path" d="m512 256c0 141.39-114.61 256-256 256s-256-114.61-256-256 114.61-256 256-256 256 114.61 256 256z" fill="#FFE800" data-old_color="#E76E54" data-original="#E76E54"/><path class="" d="m384 256c0 70.691-57.309 128-128 128s-128-57.309-128-128 57.309-128 128-128 128 57.309 128 128z" fill="#ff0" dataoriginal="#DD523C"/></svg>';
-  var redLabelSVG =
-    '<?xml version="1.0" encoding="UTF-8"?><svg width="17px" height="17px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m512 256c0 141.39-114.61 256-256 256s-256-114.61-256-256 114.61-256 256-256 256 114.61 256 256z" fill="#e76e54"/><path d="m384 256c0 70.691-57.309 128-128 128s-128-57.309-128-128 57.309-128 128-128 128 57.309 128 128z" fill="#dd523c"/></svg>';
+  var redLabelSVG = '<?xml version="1.0" encoding="UTF-8"?><svg width="15px" height="15px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m512 256c0 141.39-114.61 256-256 256s-256-114.61-256-256 114.61-256 256-256 256 114.61 256 256z" fill="#e76e54"/><path d="m384 256c0 70.691-57.309 128-128 128s-128-57.309-128-128 57.309-128 128-128 128 57.309 128 128z" fill="#dd523c"/></svg>';
 
   if (document.getElementById("viktig").value === "green") {
     label.innerHTML = greenLabelSVG;
@@ -126,7 +127,7 @@ function addItemTodo(text) {
 
   // legge til "ansatte" til item
   var select = document.getElementById("Group");
-  var arr = ["D", "T", "U", "M", "B"];
+  var arr = ["D", "T", "U", "M", "B",];
 
   var option = document.createElement("div");
   option.classList.add("ansatt");
@@ -146,7 +147,7 @@ function addItemTodo(text) {
   } else if (document.getElementById("Group").value === "Benjamin") {
     option.innerHTML = arr[4];
     option.setAttribute("id", "Benjamin");
-  }
+  };
 
   info.addEventListener("click", function() {
     var editInput = document.createElement("input");
@@ -162,19 +163,20 @@ function addItemTodo(text) {
         item.innerText = editInput.value;
         editInput.style.display = "none";
         inputEditText.style.display = "none";
-        item.appendChild(remove);
-        item.appendChild(info);
-        item.appendChild(option);
-        item.appendChild(label);
+        buttons.appendChild(remove);
+        buttons.appendChild(info);
+        buttons.appendChild(option);
+        buttons.appendChild(label);
+        item.appendChild(buttons);
       }
     };
   });
 
   //legge til items til hoved-div
-  item.appendChild(remove);
-  item.appendChild(info);
-  item.appendChild(option);
-  item.appendChild(label);
+  buttons.appendChild(remove);
+  buttons.appendChild(info);
+  buttons.appendChild(option);
+  buttons.appendChild(label);
   list.appendChild(item);
 
   // lagre tasks med info til objekt

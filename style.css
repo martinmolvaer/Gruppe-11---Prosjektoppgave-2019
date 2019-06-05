@@ -93,7 +93,6 @@
   cursor: pointer;
   border: 10px solid transparent;
   min-height: 95px;
-
 }
 
 /* farge på innhold/skrift */
@@ -108,9 +107,8 @@
   width: 500px;
   height: 200px;
   color: #fff;
-  display: block;
   font-size: 40px;
-  background-color: #ff7033ef;
+  background-color: #ffd553;
   position: absolute;
   z-index: 100090;
   left: 35%;
@@ -129,7 +127,8 @@
 
 
 .board-item-content {
-  position: relative;
+  position: absolute;
+  display: flex;
   padding: 15px;
   background: #fff;
   font-size: 20px;
@@ -248,7 +247,8 @@ header button svg .fill {
 
 #banan {
   position: absolute;
-  top: 131px;
+  bottom: 5px;
+  left: 95%;
   animation: rotate 1s ease-in-out infinite;
 }
 
@@ -272,17 +272,6 @@ header button svg .fill {
   padding: 15px;
 }
 
-.remove {
-  width: 15px;
-  height: 15px;
-
-}
-
-.info {
-  width: 15px;
-  float: right;
-  margin: -10px;
-}
 
 .remove svg:hover {
   fill: rgb(224, 97, 38);
@@ -304,23 +293,34 @@ header button svg .fill {
   left: 150px;
 }
 
+.info{
+  width: 15px;
+  position: relative;
+}
+
 .ansatt {
   color: #FF7133;
-  font-size: 15px;
-  font-weight: 900;
-  padding: 2px;
 }
+.remove {
+  width: 15px;
+  left: 75px;
+  bottom: 47%;
+
+}
+
+
 
 /* icons for viktighet */
 .label {
   width: 15px;
-  float: right;
-  margin: -10px;
+  top: 30px;
 }
 
-.label:hover {}
-
-/* POP UP CSS */
+.buttons{
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
 
 
 
