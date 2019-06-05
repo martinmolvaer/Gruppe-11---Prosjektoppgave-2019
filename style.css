@@ -1,7 +1,7 @@
 .board {
   position: relative;
   margin-left: 1%;
-  top: 100px;
+  top: 10px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 
@@ -123,7 +123,7 @@
   left: 50%;
   top: 230px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: black;
+  color: #e7ce89;
 }
 
 
@@ -249,8 +249,6 @@ header button {
 header button svg {
   width: 35px;
   animation: buttonanim 1s ease-in-out;
-
-
 }
 
 header button svg .fill {
@@ -349,7 +347,7 @@ header button svg .fill {
   bottom: 20px;
   left: 25px;
   width: 180px;
-  font-size: 15px;
+  font-size: 25px;
   z-index: 10;
 }
 
@@ -378,7 +376,7 @@ header button svg .fill {
   width: 250px;
   margin-bottom: 10px;
   opacity: 0.8;
-  font-size: 15px;
+  font-size: 25px;
 }
 
 .open-button:hover {
@@ -410,13 +408,13 @@ header button svg .fill {
 
 .modal-content {
   margin: auto;
+  padding: 5px;
   display: block;
   width: 100%;
   position: absolute;
   max-width: 700px;
   width: 700px;
   margin: 5px;
-  height: 200px;
   left: 450px;
   top: 300px;
   background-color: #fff;
@@ -499,7 +497,7 @@ header button svg .fill {
   width: 150px;
   position: relative; 
   z-index: 100091;
-  left: 43%;
+  left: 45%;
   top: 20px;
   margin: 5px;
   padding: 5px;
