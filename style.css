@@ -189,7 +189,7 @@ header {
   top: 0;
   left: 0;
   z-index: 5;
-  background: #FF7133;
+  background: #ffd553;
   box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
 }
 
@@ -198,7 +198,7 @@ header input {
   width: 95%;
   height: 50px;
   float: left;
-  color: #fff;
+  color: #d29b6e;
   font-size: 15px;
   font-weight: 400;
   text-indent: 18px;
@@ -246,25 +246,22 @@ header button svg .fill {
 }
 
 #banan {
-  z-index: 1000;
-  top: 150px;
-  margin: 20px;
-  left: 700px;
-  float: right;
+  position: absolute;
+  top: 131px;
   animation: rotate 1s ease-in-out infinite;
 }
 
 @keyframes rotate {
   0% {
-    transform: rotate(90deg)
+    transform: rotate(70deg)
   }
 
   50% {
-    transform: rotate(45deg)
+    transform: rotate(55deg)
   }
 
   100% {
-    transform: rotate(90deg);
+    transform: rotate(70deg);
   }
 }
 
@@ -480,4 +477,17 @@ header button svg .fill {
 
 #labelselect {
   left: 0px;
+}
+
+#logo{
+
+  height: 150px;
+  width: 150px;
+  position: relative; 
+  z-index: 100091;
+  left: 43%;
+  top: 20px;
+  margin: 5px;
+  padding: 5px;
+
 }
