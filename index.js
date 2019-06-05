@@ -96,15 +96,11 @@ function addItemTodo(text) {
   info.innerHTML = infoSVG;
 
   // add click event for removing
-  remove.addEventListener("click", function() {
+  remove.addEventListener("click", function(e) {
     item.style.display = "none";
+    
+    memberSave.splice(item.indexOfThis, 1);
 
-    for (i = 0; i < memberSave.length; i++){
-
-      memberSave.splice(i, 1);
-      console.log(memberSave[i])
-
-    }
   });
 
   var buttons = document.createElement('div');
@@ -192,9 +188,13 @@ function addItemTodo(text) {
     Task: input.value,
     Label: label.id,
     Member: option.id
+  
   };
-  //legge tasks med info fra objekt til i array
+  item.indexOfThis = memberSave.length;
+
+  //legge tasks med info fra objekt til i array  
   memberSave.push(taskSave);
+
 }
 
 console.log(memberSave);
