@@ -216,8 +216,8 @@ function setInvert() {
     document.getElementById("done-header").style.background = "#000000";
     document.getElementById("done-header").style.fontWeight = "900";
     document.getElementById("done-header").style.color="#fff"
-    document.getElementById("working-header").style.background ="#ffff00";
-    document.getElementById("working-header").style.fontWeight = "900";
+    document.getElementById("doing-header").style.background ="#ffff00";
+    document.getElementById("doing-header").style.fontWeight = "900";
     document.getElementById("todo-header").style.background = "#ff0000";
     document.getElementById("todo-header").style.fontWeight = "900";
     document.getElementById("viktig").style.fontWeight = "900";
@@ -233,8 +233,9 @@ function setInvert() {
     document.getElementById("header").style.background = "#ffd553";
     document.getElementById("done-header").style.background = "#66B85A";
     document.getElementById("done-header").style.fontWeight = "normal";
-    document.getElementById("working-header").style.background = "#e7ce89";
-    document.getElementById("working-header").style.fontWeight = "normal";
+    document.getElementById("done-header").style.color="#000000"
+    document.getElementById("doing-header").style.background = "#e7ce89";
+    document.getElementById("doing-header").style.fontWeight = "normal";
     document.getElementById("todo-header").style.background = "#339DA4";
     document.getElementById("todo-header").style.fontWeight = "normal";
     document.getElementById("viktig").style.fontWeight = "normal";
