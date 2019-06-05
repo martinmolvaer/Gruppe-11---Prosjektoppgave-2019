@@ -273,7 +273,6 @@ header button svg .fill {
 }
 
 .remove {
-  margin-left: 120px;
 }
 .remove svg:hover {
   fill: rgb(224, 97, 38);
