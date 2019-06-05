@@ -317,7 +317,8 @@ header button svg .fill {
 }
 
 .buttons{
-  margin: auto;
+  position: absolute;
+  padding: 20px;
   display: flex;
   justify-content: space-evenly;
 }
