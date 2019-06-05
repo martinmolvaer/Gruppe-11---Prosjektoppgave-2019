@@ -279,7 +279,6 @@ header button svg .fill {
 
 .info {
   width: 15px;
-  height: 15px;
   float: right;
   margin: -10px;
 }
@@ -308,6 +307,7 @@ header button svg .fill {
   color: #FF7133;
   font-size: 15px;
   font-weight: 900;
+  padding: 2px;
 }
 
 /* icons for viktighet */

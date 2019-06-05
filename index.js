@@ -125,7 +125,7 @@ function addItemTodo(text) {
   var select = document.getElementById("Group");
   var arr = ["D", "T", "U", "M", "B"];
 
-  var option = document.createElement("DIV");
+  var option = document.createElement("div");
   option.classList.add("ansatt");
 
   if (select.value === "Danial") {
@@ -168,10 +168,10 @@ function addItemTodo(text) {
   });
 
   //legge til items til hoved-div
-  item.appendChild(label);
   item.appendChild(remove);
   item.appendChild(info);
   item.appendChild(option);
+  item.appendChild(label);
   list.appendChild(item);
 
   // lagre tasks med info til objekt
