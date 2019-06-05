@@ -2,9 +2,8 @@
   position: relative;
   margin-left: 1%;
   top: 10px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
-
 }
 
 /* Bakgrunn av div som holder items TODO */
@@ -15,7 +14,6 @@
   border-radius: 3px;
   z-index: 1;
   position: absolute;
-
 }
 
 .board-column-doing {
@@ -36,7 +34,6 @@
   background: #f5f5f5;
   border-radius: 3px;
   z-index: 1;
-
 }
 
 .board-column-header {
@@ -59,21 +56,19 @@
 
 /* To do-header */
 .board-column.todo .board-column-header {
-  background: #339DA4;
+  background: #339da4;
 }
 
 /* doing-header */
 
 .board-column-doing .board-column-header {
   background: #e7ce89;
-
 }
 
 /* done-header */
 .board-column-done .board-column-header {
-  background: #66B85A;
+  background: #66b85a;
 }
-
 
 /*
    always use a wrapper for setting
@@ -84,7 +79,6 @@
   overflow-y: auto;
   max-height: 450px;
 }
-
 
 .board-column-content {
   overflow: scroll;
@@ -115,16 +109,15 @@
   border: 10px grey solid;
 }
 
-.displayEditText{
+.displayEditText {
   z-index: 1000;
   position: relative;
   left: 50%;
   top: 230px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #e7ce89;
 }
-
-
 
 .board-item-content {
   position: absolute;
@@ -139,7 +132,6 @@
   margin: 5px;
 }
 
-
 .board-item-content {
   position: relative;
   padding: 20px;
@@ -151,7 +143,6 @@
   box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
-
 @media (max-width: 600px) {
   .board-item-content {
     text-align: center;
@@ -161,7 +152,6 @@
     display: none;
   }
 }
-
 
 /* THIS IS THE TO DO LIST */
 
@@ -173,7 +163,7 @@ body {
 body,
 input,
 button {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .noFill {
@@ -242,7 +232,7 @@ header button svg {
 }
 
 header button svg .fill {
-  fill: #FF7133;
+  fill: #ff7133;
 }
 
 #banan {
@@ -254,11 +244,11 @@ header button svg .fill {
 
 @keyframes rotate {
   0% {
-    transform: rotate(70deg)
+    transform: rotate(70deg);
   }
 
   50% {
-    transform: rotate(55deg)
+    transform: rotate(55deg);
   }
 
   100% {
@@ -294,22 +284,19 @@ header button svg .fill {
   left: 150px;
 }
 
-.info{
+.info {
   width: 15px;
   position: relative;
 }
 
 .ansatt {
-  color: #FF7133;
+  color: #ff7133;
 }
 .remove {
   width: 15px;
   left: 75px;
   bottom: 47%;
-
 }
-
-
 
 /* icons for viktighet */
 .label {
@@ -317,17 +304,13 @@ header button svg .fill {
   top: 30px;
 }
 
-.buttons{
+.buttons {
   position: absolute;
   padding: 22px;
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   flex-basis: 200px;
-  
 }
-
-
-
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
@@ -414,7 +397,7 @@ header button svg .fill {
   top: 300px;
   background-color: #fff;
   border: 2px solid black;
-  font-size: 15px; 
+  font-size: 15px;
   font-weight: 500;
 }
 
@@ -446,7 +429,7 @@ header button svg .fill {
   -moz-appearance: none;
   appearance: none;
   /* Add some styling */
-  content: '<>';
+  content: "<>";
 
   display: block;
   width: 80%;
@@ -471,15 +454,13 @@ header button svg .fill {
   left: 0px;
 }
 
-#logo{
-
+#logo {
   height: 150px;
   width: 150px;
-  position: relative; 
+  position: relative;
   z-index: 100091;
   left: 45%;
   top: 20px;
   margin: 5px;
   padding: 5px;
-
 }
