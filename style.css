@@ -414,14 +414,15 @@ header button svg .fill {
   width: 100%;
   position: absolute;
   max-width: 700px;
-  width: 300px;
+  width: 700px;
   margin: 5px;
-  height: 100px;
+  height: 200px;
   left: 450px;
   top: 300px;
   background-color: #fff;
   border: 2px solid black;
-  font-size: 15px;
+  font-size: 15px; 
+  font-weight: 500;
 }
 
 .close {
