@@ -146,7 +146,7 @@ function addItemTodo(text) {
     option.innerHTML = arr[4];
     option.setAttribute("id", "Benjamin");
   }
- // lage edit-input-boksen
+  // lage edit-input-boksen
   info.addEventListener("click", function() {
     var editInput = document.createElement("input");
     var inputEditText = document.createElement("h1");

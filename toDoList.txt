@@ -1,0 +1,158 @@
+.board {
+  position: relative;
+  margin-left: 1%;
+  top: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+/* Bakgrunn av div som holder items TODO */
+.board-column {
+  width: 30%;
+  margin: 0 1.5%;
+  background: #f5f5f5;
+  border-radius: 3px;
+  z-index: 1;
+  position: absolute;
+}
+
+.board-column-doing {
+  position: absolute;
+  left: 33%;
+  width: 30%;
+  margin: 0 1.5%;
+  background: #f5f5f5;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.board-column-done {
+  position: absolute;
+  left: 66%;
+  width: 30%;
+  margin: 0 1.5%;
+  background: #f5f5f5;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.board-column-header {
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  padding: 0 20px;
+  text-align: center;
+  background: #333;
+  color: black;
+  border-radius: 3px 3px 0 0;
+}
+
+@media (max-width: 600px) {
+  .board-column-header {
+    text-indent: -1000px;
+  }
+}
+
+/* To do-header */
+.board-column.todo .board-column-header {
+  background: #339da4;
+}
+
+/* doing-header */
+
+.board-column-doing .board-column-header {
+  background: #e7ce89;
+}
+
+/* done-header */
+.board-column-done .board-column-header {
+  background: #66b85a;
+}
+
+/*
+   always use a wrapper for setting
+   the "overflow: scroll/auto"  */
+.board-column-content-wrapper {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  max-height: 450px;
+}
+
+.board-column-content {
+  overflow: scroll;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border: 10px solid transparent;
+  min-height: 95px;
+}
+
+/* farge på innhold/skrift */
+.board-item {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.input-display {
+  width: 500px;
+  height: 200px;
+  color: #fff;
+  font-size: 40px;
+  background-color: #ffd553;
+  position: absolute;
+  z-index: 100090;
+  left: 35%;
+  border: 10px grey solid;
+}
+
+.displayEditText {
+  z-index: 1000;
+  position: relative;
+  left: 50%;
+  top: 230px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #e7ce89;
+}
+
+.board-item-content {
+  position: absolute;
+  display: flex;
+  padding: 15px;
+  background: #fff;
+  font-size: 20px;
+  border: 1px black solid;
+  cursor: grab;
+  -webkit-box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
+  margin: 5px;
+}
+
+.board-item-content {
+  position: relative;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  .board-item-content {
+    text-align: center;
+  }
+
+  .board-item-content span {
+    display: none;
+  }
+}
+
+/* THIS IS THE TO DO LIST */
+/* ===============================================================================================================================
+===============================================================================================================================*/
