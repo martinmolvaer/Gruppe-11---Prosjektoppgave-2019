@@ -130,21 +130,21 @@ function addItemTodo(text) {
   var option = document.createElement("div");
   option.classList.add("ansatt");
 
-  if (select.value === "Danial") {
+  if (select.value === "Dennis") {
     option.innerHTML = arr[0];
-    option.setAttribute("id", "Danial");
-  } else if (document.getElementById("Group").value === "Thomas") {
+    option.setAttribute("id", "Dennis");
+  } else if (document.getElementById("Group").value === "Turid") {
     option.innerHTML = arr[1];
-    option.setAttribute("id", "Thomas");
-  } else if (document.getElementById("Group").value === "Umu") {
+    option.setAttribute("id", "Turid");
+  } else if (document.getElementById("Group").value === "Uriel") {
     option.innerHTML = arr[2];
-    option.setAttribute("id", "Umu");
-  } else if (document.getElementById("Group").value === "Martin") {
+    option.setAttribute("id", "Uriel");
+  } else if (document.getElementById("Group").value === "Markus") {
     option.innerHTML = arr[3];
-    option.setAttribute("id", "Martin");
-  } else if (document.getElementById("Group").value === "Benjamin") {
+    option.setAttribute("id", "Markus");
+  } else if (document.getElementById("Group").value === "Bengt") {
     option.innerHTML = arr[4];
-    option.setAttribute("id", "Benjamin");
+    option.setAttribute("id", "Bengt");
   }
   // lage edit-input-boksen
   info.addEventListener("click", function() {
